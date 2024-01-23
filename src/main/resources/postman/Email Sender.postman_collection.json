@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "09c450e5-54f6-4793-9002-e42d8ccba70f",
+		"name": "Email Sender",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4309123"
+	},
+	"item": [
+		{
+			"name": "Enviar Email Java",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerRef\":\"Fernando\",\r\n    \"emailFrom\":\"fernandoericofilho@gmail.com\",\r\n    \"emailTo\":\"ed2paulo@gmail.com\",\r\n    \"subject\":\"Teste de envio de email via Java API\",\r\n    \"text\":\"Deixe de jogar baralho\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sending-java-email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sending-java-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enviar Email SES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ownerRef\":\"Fernando\",\r\n    \"emailFrom\":\"fernandoericofilho@gmail.com\",\r\n    \"emailTo\":\"fernandoericofilho@gmail.com\",\r\n    \"subject\":\"Teste de envio de email via AWS SES\",\r\n    \"text\":\"Você tá gordo!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sending-ses-email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sending-ses-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/emails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/emails/9593f0cf-954b-4463-9169-b43f07a3bddf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"emails",
+						"9593f0cf-954b-4463-9169-b43f07a3bddf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
